@@ -3,7 +3,8 @@ module.exports = {
   content: [
     './src/index.js',
     './src/App.js',
-    './src/',
+    './src/partials/Header.js',
+    './src/partials/HeaderItem.js',
   ],
   theme: {
     extend: {
@@ -12,7 +13,10 @@ module.exports = {
         'cyan':'#06c4de',
         'dark-cornflower':'#2a4078',
         'purple-pizzazz':'#ff39fa',
-      }
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],

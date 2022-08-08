@@ -1,11 +1,14 @@
 import "./App.scss";
+import { Router } from "./Router";
+import { Header } from "./partials/Header";
 
 function App() {
   return (
-    <div className="bg-space-cadet min-h-screen">
-      {/* <h1 className='text-cyan uppercase'>App</h1>
-      <button className='bg-dark-cornflower p-20'>Click me</button>
-      <div className='h-20 w-20 rounded-full bg-purple-pizzazz'></div> */}
+    <div className="w-sreen min-h-screen flex bg-space-cadet">
+      <div className="mx-auto w-full md:w-2/3">
+        <Header/>
+        <Router />
+      </div>
     </div>
   );
 }
