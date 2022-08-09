@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Bank-Interface/static/css/main.ec596469.css",
+    "main.js": "/Bank-Interface/static/js/main.2d8ccae1.js",
+    "index.html": "/Bank-Interface/index.html",
+    "main.ec596469.css.map": "/Bank-Interface/static/css/main.ec596469.css.map",
+    "main.2d8ccae1.js.map": "/Bank-Interface/static/js/main.2d8ccae1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec596469.css",
+    "static/js/main.2d8ccae1.js"
+  ]
+}
