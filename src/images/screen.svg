@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.64 8.57">
+    <defs>
+        <style>.cls-1{fill:#fff;}</style>
+    </defs>
+    <title>screen</title>
+    <g id="OBJECTS">
+        <path class="cls-1" d="M.05,1.77V5.68a.63.63,0,0,0,.63.63H8a.63.63,0,0,0,.63-.63V1.77A.63.63,0,0,0,8,1.14H.68A.63.63,0,0,0,.05,1.77ZM7.62,5.43H1V2h6.6Z" />
+        <rect class="cls-1" x="3.78" y="5.67" width="1.08" height="1.93" />
+        <rect class="cls-1" x="2.73" y="7.25" width="3.17" height="0.47" />
+        <polygon class="cls-1" points="3.6 2.89 5.04 3.73 3.6 4.56 3.6 2.89" />
+    </g>
+</svg>

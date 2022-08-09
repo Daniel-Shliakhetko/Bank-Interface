@@ -4,7 +4,15 @@ module.exports = {
     './src/index.js',
     './src/App.js',
     './src/partials/Header.js',
-    './src/partials/HeaderItem.js',
+    './src/partials/Loader.js',
+    './src/partials/Cards.js',
+    './src/partials/Button.js',
+    './src/partials/Form.js',
+    './src/partials/Titles.js',
+    './src/partials/Decorative.js',
+    './src/pages/FrontPage.js',
+    './src/pages/CardsPage.js',
+    './src/pages/Login.js',
   ],
   theme: {
     extend: {

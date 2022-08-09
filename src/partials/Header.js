@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { HeaderItem } from "./HeaderItem";
 import { navItems } from "../data/navigation";
 import useWindowSize from "../hooks/useWindowSize";
 
@@ -44,5 +43,13 @@ export const Header = () => {
         <div className="relative bg-white w-8 h-[3px] after:content-[''] after:absolute after:top-0 after:left-0 after:bg-white after:w-8 after:h-[3px] after:translate-y-[0.625rem] before:content-[''] before:absolute before:top-0 before:left-0 before:bg-white before:w-8 before:h-[3px] before:translate-y-[-0.625rem]"></div>
       </button>
     </div>
+  );
+};
+
+const HeaderItem = (props) => {
+  return (
+    <li>
+      <a className='text-cyan' href={props.navItem.slug}>{props.navItem.name}</a>
+    </li>
   );
 };

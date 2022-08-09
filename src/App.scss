@@ -9,3 +9,72 @@
         @apply text-white font-montserrat;
     }
 }
+
+* {
+    user-select: none;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.progress-bar {
+    animation: 1.5s progress;
+}
+
+.loading::after {
+    content: "";
+    animation: 1s progress-dots infinite;
+}
+
+.loading-screen {
+    animation: 2s loading-screen;
+}
+
+@keyframes loading-screen {
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes progress {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes progress-dots {
+    0% {
+        content: ''
+    }
+
+    33% {
+        content: '.'
+    }
+
+    67% {
+        content: '..'
+    }
+
+    100% {
+        content: '...'
+    }
+}

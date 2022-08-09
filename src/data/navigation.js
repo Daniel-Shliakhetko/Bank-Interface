@@ -3,5 +3,5 @@ export const navItems = [
   { name: "Balance", slug: "/balance" },
   { name: "Expenses", slug: "/expenses" },
   { name: "Analytics", slug: "/analytics" },
-  { name: "Account", slug: "/login" },
+  { name: "Account", slug: "/auth" },
 ];
