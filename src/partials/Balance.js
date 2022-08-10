@@ -7,7 +7,7 @@ export const Balance = (props) => {
   return (
     <div className="relative h-30 rounded-lg px-8 py-4 my-8 bg-dark-cornflower">
       <h2 className="text-lg font-semibold">{balance.name}</h2>
-      {balance.description && <p className="text-[#ccc]">{balance.description}</p>}
+      {balance.description && <p className="text-[#ccc] mb-4">{balance.description}</p>}
       <div className="w-full flex justify-between">
         <span className="text-3xl">$ {balance.money}</span>
         {balance.moneyTwo && (

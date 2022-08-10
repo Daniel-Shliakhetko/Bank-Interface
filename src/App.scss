@@ -14,13 +14,14 @@
     user-select: none;
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 16px!important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .progress-bar {
@@ -77,4 +78,24 @@ h6 {
     100% {
         content: '...'
     }
+}
+
+.swiper-slide {
+    // max-width: fit-content;
+}
+
+.swiper{
+    padding-bottom: 5rem!important;
+}
+
+.swiper-pagination{
+    bottom:0;
+}
+
+.swiper-pagination-bullet {
+    background:white!important;
+}
+
+.swiper-pagination-bullet-active {
+    background:#ccc!important;
 }

@@ -1,20 +1,42 @@
 import React from "react";
 import { useState } from "react";
 
+import { Pagination, FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import useWindowSize from "../hooks/useWindowSize"
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import "../App.scss";
+
 export const Cards = (props) => {
+  const size = useWindowSize();
   return (
-    <div className='flex space-x-8 w-full'>
+    <Swiper
+      slidesPerView={size.width < 700 ? 1 : 2}
+      spaceBetween={70}
+      freeMode={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[FreeMode, Pagination]}
+    >
       {props.cards.map((card, i) => (
-        <Card key={i} card={card} background={card.background} />
+        <SwiperSlide>
+          <Card key={i} card={card} background={card.background} />
+        </SwiperSlide>
       ))}
-    </div>
+    </Swiper>
+    // </div>
   );
 };
 
 export const Card = (props) => {
   const { card, background } = props;
   const className =
-    "min-h-[10rem] min-w-20 max-w-30 rounded-xl p-4 relative cursor-pointer bg-" + background;
+    "min-h-[10rem] min-w-20 max-w-30 rounded-xl p-4 mr-8 relative cursor-pointer bg-" +
+    background;
 
   let parsedNumber = [];
 
@@ -28,7 +50,11 @@ export const Card = (props) => {
   const [isNumberShowed, toggleNumber] = useState(false);
 
   return (
-    <div className={className} style={{"max-width":"20rem","min-width":"20rem"}} onClick={() => toggleNumber(!isNumberShowed)}>
+    <div
+      className={className}
+      style={{ "max-width": "20rem", "min-width": "20rem" }}
+      onClick={() => toggleNumber(!isNumberShowed)}
+    >
       <span className="uppercase">{card.bank}</span>
       <CardDots data={parsedNumber} show={isNumberShowed} />
       <span className="text-xl uppercase absolute w-fit left-4 bottom-4">

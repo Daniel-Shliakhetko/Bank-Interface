@@ -19,6 +19,20 @@ const cards = [
     cardNumber: "1234567890000000",
     background: "dark-cornflower",
   },
+  {
+    bank: "bank name",
+    name: "Name",
+    surname: "Surname",
+    cardNumber: "1234567890000000",
+    background: "cyan",
+  },
+  {
+    bank: "bank name",
+    name: "Name",
+    surname: "Surname",
+    cardNumber: "1234567890000000",
+    background: "dark-cornflower",
+  },
 ];
 
 const balance = {
@@ -26,7 +40,7 @@ const balance = {
   description: "Aliquam erat volutpat maec",
   money: 3500,
   moneyTwo: 1200,
-  isVisa: true,
+  isVisa: false,
 };
 
 export const CardsPage = () => {
