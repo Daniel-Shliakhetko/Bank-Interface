@@ -1,5 +1,8 @@
 import React from "react";
 import { Cards } from "../partials/Cards";
+import { SectionTitle } from "../partials/Titles";
+import { Balance } from "../partials/Balance";
+import { Button } from "../partials/Button";
 
 const cards = [
   {
@@ -18,10 +21,23 @@ const cards = [
   },
 ];
 
+const balance = {
+  name: "Cards",
+  description: "Aliquam erat volutpat maec",
+  money: 3500,
+  moneyTwo: 1200,
+  isVisa: true,
+};
+
 export const CardsPage = () => {
   return (
     <>
+      <SectionTitle content="Adipiscing elit" />
       <Cards cards={cards} />
+      <Balance balance={balance} />
+      <div className="flex justify-center items-center">
+        <Button content="Add card" />
+      </div>
     </>
   );
 };

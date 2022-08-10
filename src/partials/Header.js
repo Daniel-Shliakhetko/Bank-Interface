@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { navItems } from "../data/navigation";
+import { mainPath, navItems } from "../data/navigation";
 import useWindowSize from "../hooks/useWindowSize";
 
 export const Header = () => {
@@ -30,7 +30,7 @@ export const Header = () => {
 
   return (
     <div className="w-full px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
-      <a href="/">Banking App</a>
+      <a href={mainPath}>Banking App</a>
       <ul className={ulClasses}>
         {navItems.map((navItem) => (
           <HeaderItem navItem={navItem} />
@@ -49,7 +49,7 @@ export const Header = () => {
 const HeaderItem = (props) => {
   return (
     <li>
-      <a className='text-cyan' href={props.navItem.slug}>{props.navItem.name}</a>
+      <a className='text-cyan' href={mainPath+props.navItem.slug}>{props.navItem.name}</a>
     </li>
   );
 };

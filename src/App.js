@@ -4,10 +4,10 @@ import { Header } from "./partials/Header";
 
 function App() {
   return (
-    <div className="w-sreen min-h-screen flex bg-space-cadet">
-      <div className="mx-auto w-full md:w-3/4">
+    <div className="w-sreen min-h-screen flex justify-center items-top bg-space-cadet">
+      <div className="w-full lg:max-w-[75%]">
         <Header/>
-        <main class="p-12">
+        <main class="px-12 py-4">
         <Router />
         </main>
       </div>
