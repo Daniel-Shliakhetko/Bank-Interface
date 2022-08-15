@@ -30,7 +30,7 @@ export const Header = () => {
 
   return (
     <div className="w-full px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
-      <a href={mainPath}>Banking App</a>
+      <a href={mainPath+"/"}>Banking App</a>
       <ul className={ulClasses}>
         {navItems.map((navItem) => (
           <HeaderItem navItem={navItem} />

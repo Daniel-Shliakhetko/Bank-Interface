@@ -14,7 +14,7 @@ export const Cards = (props) => {
   const size = useWindowSize();
   return (
     <Swiper
-      slidesPerView={size.width < 700 ? 1 : 2}
+      slidesPerView={size.width < 700 ? 1 : size.width < 1400 ? 2 : 3}
       spaceBetween={70}
       freeMode={true}
       pagination={{

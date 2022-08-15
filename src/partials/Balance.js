@@ -2,14 +2,18 @@ import React from "react";
 import { ThreeDots } from "../partials/Decorative";
 
 export const Balance = (props) => {
-  const { balance } = props;
+  const { balance, className } = props;
+  const balanceClass =
+    className + " relative h-30 rounded-lg px-8 py-4 my-4 bg-dark-cornflower";
 
   return (
-    <div className="relative h-30 rounded-lg px-8 py-4 my-8 bg-dark-cornflower">
+    <div className={balanceClass}>
       <h2 className="text-lg font-semibold">{balance.name}</h2>
-      {balance.description && <p className="text-[#ccc] mb-4">{balance.description}</p>}
+      {balance.description && (
+        <p className="text-[#ccc]">{balance.description}</p>
+      )}
       <div className="w-full flex justify-between">
-        <span className="text-3xl">$ {balance.money}</span>
+        <span className="text-3xl mt-6">$ {balance.money}</span>
         {balance.moneyTwo && (
           <span className="text-3xl">$ {balance.moneyTwo}</span>
         )}

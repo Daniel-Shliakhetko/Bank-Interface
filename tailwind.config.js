@@ -9,6 +9,7 @@ module.exports = {
     './src/partials/Button.js',
     './src/partials/Form.js',
     './src/partials/Balance.js',
+    './src/partials/Icon.js',
     './src/partials/Titles.js',
     './src/partials/Decorative.js',
     './src/pages/FrontPage.js',
