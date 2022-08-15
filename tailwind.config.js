@@ -14,6 +14,7 @@ module.exports = {
     './src/partials/Decorative.js',
     './src/pages/FrontPage.js',
     './src/pages/CardsPage.js',
+    './src/pages/BillPage.js',
     './src/pages/Login.js',
   ],
   theme: {

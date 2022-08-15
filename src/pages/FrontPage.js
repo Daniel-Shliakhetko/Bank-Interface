@@ -5,22 +5,8 @@ import { Button } from "../partials/Button";
 import { IconButton } from "../partials/Decorative";
 import { Loader } from "../partials/Loader";
 import { SectionTitle } from "../partials/Titles";
+import { bills } from "../data/bills";
 
-const bills = [
-  {
-    name: "Bill 01",
-    description: "Aliquam erat volutpat maec",
-    money: 3500,
-  },
-  {
-    name: "Bill 02",
-    money: 650,
-  },
-  {
-    name: "Bill 03",
-    money: 480,
-  },
-];
 const buttons = [
   { icon: { name: "stack", size: "3em", color: "white" }, label: "Volutpat" },
   { icon: { name: "screen", size: "3em", color: "white" }, label: "Volutpat" },
