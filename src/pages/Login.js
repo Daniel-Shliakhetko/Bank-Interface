@@ -24,7 +24,7 @@ const inputs = [
 export const Login = () => {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="px-12 w-full">
       <AppTitle />
       <Divider />
       <Form inputs={inputs} />
@@ -47,6 +47,6 @@ export const Login = () => {
         content="create an account"
         color="dark-cornflower"
       />
-    </>
+    </div>
   );
 };

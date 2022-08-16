@@ -24,7 +24,7 @@ export const FrontPage = (props) => {
   }, []);
 
   return (
-    <>
+    <div className="px-12 w-full">
       {loading && props.isLoading && <Loader />}
       <SectionTitle content="Adipiscing elit" />
       <Balance balance={bills[0]} />
@@ -42,6 +42,6 @@ export const FrontPage = (props) => {
           <IconButton key={i} button={button} />
         ))}
       </div>
-    </>
+    </div>
   );
 };

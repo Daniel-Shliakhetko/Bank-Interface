@@ -19,7 +19,17 @@ const bills = [
         name: "Enim",
         description: "Proin vit.",
         money: -380,
-      }
+      },
+      {
+        name: "Fermentum",
+        description: "Proin vit.",
+        money: 211,
+      },
+      {
+        name: "Adipiscing",
+        description: "Proin vit.",
+        money: -1200,
+      },
     ],
   },
   {

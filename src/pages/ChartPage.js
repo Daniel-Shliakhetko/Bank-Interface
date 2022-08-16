@@ -85,8 +85,8 @@ const data = {
 
 export const ChartPage = () => {
   return (
-    <>
+    <div className="px-12 w-full">
       <Line options={options} data={data} />
-    </>
+    </div>
   );
 };

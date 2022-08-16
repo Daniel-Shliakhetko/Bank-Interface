@@ -1,17 +1,25 @@
 import React from "react";
-import { ThreeDots } from "../partials/Decorative";
+import { BackArrow, ThreeDots } from "../partials/Decorative";
 import { useNavigate } from "react-router-dom";
+import { SectionTitle } from "./Titles";
 
 export const Balance = (props) => {
   const { balance, className } = props;
-  const clickClass =  balance.expenses ? "cursor-pointer" : "";
+  const clickClass = balance.expenses ? "cursor-pointer" : "";
   const balanceClass =
-    className + " relative h-30 rounded-lg px-8 py-4 my-4 bg-dark-cornflower " + clickClass;
+    className +
+    " relative h-30 rounded-lg px-8 py-4 my-4 bg-dark-cornflower " +
+    clickClass;
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
-    <div className={balanceClass} onClick={()=>{balance.expenses && navigate("/bills/"+balance.slug)}}>
+    <div
+      className={balanceClass}
+      onClick={() => {
+        balance.expenses && navigate("/bills/" + balance.slug);
+      }}
+    >
       <h2 className="text-lg font-semibold">{balance.name}</h2>
       {balance.description && (
         <p className="text-[#ccc]">{balance.description}</p>
@@ -19,7 +27,7 @@ export const Balance = (props) => {
       <div className="w-full flex justify-between">
         <span className="text-3xl mt-6">$ {balance.money}</span>
         {balance.moneyTwo && (
-          <span className="text-3xl">$ {balance.moneyTwo}</span>
+          <span className="text-3xl mt-6">$ {balance.moneyTwo}</span>
         )}
       </div>
       {balance.isVisa && (
@@ -32,6 +40,39 @@ export const Balance = (props) => {
   );
 };
 
-export const getBalancePage = (balance)=>{
+export const OpenedBalance = (props) => {
+  const { balance, className } = props;
+  const balanceClass =
+    className +
+    "w-screen h-44 px-8 py-4 my-4 bg-dark-cornflower relative flex justify-between pt-14";
 
-}
+  const navigate = useNavigate();
+
+  return (
+    <div className={balanceClass}>
+      <div>
+        <SectionTitle content="Adipiscing elit" />
+        <span className="text-3xl mt-6">$ {balance.money}</span>
+      </div>
+      <div className="pt-12">
+        <h3 className="text-md font-semibold">{balance.name}</h3>
+        {balance.description && (
+          <p className="text-[#ccc] text-sm">{balance.description}</p>
+        )}
+      </div>
+      <button
+        className="absolute top-2 left-8"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        <BackArrow />
+      </button>
+      <button className="absolute top-4 right-8">
+        <ThreeDots />
+      </button>
+    </div>
+  );
+};
+
+export const getBalancePage = (balance) => {};

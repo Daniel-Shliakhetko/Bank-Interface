@@ -45,13 +45,13 @@ const balance = {
 
 export const CardsPage = () => {
   return (
-    <>
+    <div className="px-12 w-full">
       <SectionTitle content="Adipiscing elit" />
       <Cards cards={cards} />
       <Balance balance={balance} />
       <div className="flex justify-center items-center">
         <Button content="Add card" />
       </div>
-    </>
+    </div>
   );
 };
