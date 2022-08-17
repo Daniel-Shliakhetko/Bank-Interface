@@ -1,22 +1,22 @@
 import React from "react";
-import { BrowserRouter, Routes, Route} from "react-router-dom";
-import { defaultPath } from "./data/navigation";
+import { Routes, Route} from "react-router-dom";
+import { mainPath } from "./data/navigation";
 import { BillPage } from "./pages/BillPage";
 import { CardsPage } from "./pages/CardsPage";
 import { ChartPage } from "./pages/ChartPage";
+import { ExpensesPage } from "./pages/ExpensesPage";
 import { FrontPage } from "./pages/FrontPage";
 import { Login } from "./pages/Login";
 
 export const Router = () => {
   return (
-    <BrowserRouter>
       <Routes>
-        <Route path={defaultPath+"/"} element={<FrontPage isLoading={true} />} />
-        <Route path={defaultPath+"/cards"} element={<CardsPage/>} />
-        <Route path={defaultPath+"/auth"} element={<Login />} />
-        <Route path={defaultPath+"/analytics"} element={<ChartPage/>} />
-        <Route path={defaultPath+"/bills/:id"} element={<BillPage/>} />
+        <Route path={mainPath+"/"} exact element={<FrontPage isLoading={true} />} />
+        <Route path={mainPath+"/cards"} exact element={<CardsPage/>} />
+        <Route path={mainPath+"/auth"} exact element={<Login />} />
+        <Route path={mainPath+"/analytics"} exact element={<ChartPage/>} />
+        <Route path={mainPath+"/expenses"} exact element={<ExpensesPage/>} />
+        <Route path={mainPath+"/bills/:id"} element={<BillPage/>} />
       </Routes>
-    </BrowserRouter>
   );
 };

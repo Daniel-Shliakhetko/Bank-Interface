@@ -4,6 +4,6 @@ export const navItems = [
   { name: "Analytics", slug: "/analytics" },
   { name: "Account", slug: "/auth" },
 ];
-export const mainPath = "";
+export const mainPath = "/Bank-Interface";
 export const defaultPath = "";
 // /Bank-Interface

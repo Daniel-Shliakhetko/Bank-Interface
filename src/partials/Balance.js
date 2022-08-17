@@ -2,6 +2,7 @@ import React from "react";
 import { BackArrow, ThreeDots } from "../partials/Decorative";
 import { useNavigate } from "react-router-dom";
 import { SectionTitle } from "./Titles";
+import { ProgressBar } from "./Loader";
 
 export const Balance = (props) => {
   const { balance, className } = props;
@@ -33,6 +34,7 @@ export const Balance = (props) => {
       {balance.isVisa && (
         <span className="text-2xl text-cyan absolute top-4 right-16">VISA</span>
       )}
+      {balance.limit && (<ProgressBar className="mt-6 mb-4" max={balance.limit} val={balance.money}/>)}
       <button className="absolute top-4 right-4">
         <ThreeDots />
       </button>

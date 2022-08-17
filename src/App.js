@@ -1,9 +1,11 @@
 import "./App.scss";
 import { Router } from "./Router";
 import { Header } from "./partials/Header";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="w-sreen min-h-screen flex justify-center items-top bg-space-cadet">
       <div className="w-full lg:max-w-[75%]">
         <Header />
@@ -12,6 +14,7 @@ function App() {
         </main>
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 

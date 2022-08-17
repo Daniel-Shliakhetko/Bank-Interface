@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { mainPath, navItems } from "../data/navigation";
 import useWindowSize from "../hooks/useWindowSize";
 
@@ -29,8 +30,8 @@ export const Header = () => {
 
 
   return (
-    <div className="w-full px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
-      <a href={mainPath+"/"}>Banking App</a>
+    <nav className="w-full px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
+      <Link to={mainPath+"/"}>Banking App</Link>
       <ul className={ulClasses}>
         {navItems.map((navItem) => (
           <HeaderItem navItem={navItem} />
@@ -42,14 +43,14 @@ export const Header = () => {
       >
         <div className="relative bg-white w-8 h-[3px] after:content-[''] after:absolute after:top-0 after:left-0 after:bg-white after:w-8 after:h-[3px] after:translate-y-[0.625rem] before:content-[''] before:absolute before:top-0 before:left-0 before:bg-white before:w-8 before:h-[3px] before:translate-y-[-0.625rem]"></div>
       </button>
-    </div>
+    </nav>
   );
 };
 
 const HeaderItem = (props) => {
   return (
-    <li>
-      <a className='text-cyan' href={mainPath+props.navItem.slug}>{props.navItem.name}</a>
+    <li className="text-cyan">
+      <Link to={mainPath+props.navItem.slug}>{props.navItem.name}</Link>
     </li>
   );
 };

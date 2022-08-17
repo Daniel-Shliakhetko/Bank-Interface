@@ -15,3 +15,16 @@ export const Loader = (props) => {
     </div>
   );
 };
+
+export const ProgressBar = (props) => {
+  const { val, className } = props;
+  const max = props.max || 100;
+  const progressStyle = { width: (val / max) * 100 + "%" };
+  const wrapperClass = "w-full h-2 bg-space-cadet rounded-full " + className;
+
+  return (
+    <div className={wrapperClass}>
+      <div className="h-2 bg-cyan rounded-full" style={progressStyle}></div>
+    </div>
+  );
+};

@@ -15,6 +15,7 @@ module.exports = {
     './src/pages/FrontPage.js',
     './src/pages/CardsPage.js',
     './src/pages/BillPage.js',
+    './src/pages/ExpensesPage.js',
     './src/pages/Login.js',
   ],
   theme: {
