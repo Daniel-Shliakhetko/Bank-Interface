@@ -26,15 +26,19 @@ export const Balance = (props) => {
         <p className="text-[#ccc]">{balance.description}</p>
       )}
       <div className="w-full flex justify-between">
-        <span className="text-3xl mt-6">$ {balance.money}</span>
-        {balance.moneyTwo && (
-          <span className="text-3xl mt-6">$ {balance.moneyTwo}</span>
-        )}
+        <MoneyBalance money={balance.money} />
+        {balance.moneyTwo && <MoneyBalance money={balance.moneyTwo} />}
       </div>
       {balance.isVisa && (
         <span className="text-2xl text-cyan absolute top-4 right-16">VISA</span>
       )}
-      {balance.limit && (<ProgressBar className="mt-6 mb-4" max={balance.limit} val={balance.money}/>)}
+      {balance.limit && (
+        <ProgressBar
+          className="mt-6 mb-4"
+          max={balance.limit}
+          val={balance.money}
+        />
+      )}
       <button className="absolute top-4 right-4">
         <ThreeDots />
       </button>
@@ -54,7 +58,7 @@ export const OpenedBalance = (props) => {
     <div className={balanceClass}>
       <div>
         <SectionTitle content="Adipiscing elit" />
-        <span className="text-3xl mt-6">$ {balance.money}</span>
+        <MoneyBalance money={balance.money} />
       </div>
       <div className="pt-12">
         <h3 className="text-md font-semibold">{balance.name}</h3>
@@ -77,4 +81,27 @@ export const OpenedBalance = (props) => {
   );
 };
 
-export const getBalancePage = (balance) => {};
+const MoneyBalance = (props) => {
+  const { money } = props;
+  return <span className="text-3xl mt-6">{numberToMoney(money)}</span>;
+};
+
+const numberToMoney = (money) => {
+  const txt = money.toString();
+  let answer = "$ ";
+  let int = "";
+  let isFloat = false;
+  let coins = ""
+  for (let i = 0; i < txt.length; i++) {
+    if (txt[i] === ".") isFloat = true;
+    if (!isFloat) int += txt[i];
+    else coins += txt[i]
+  }
+  const offset = int.length % 3;
+  for (let i = 0; i < int.length; i++) {
+    if (i % 3 === offset && i !== 0 && i !== int.length - 1) answer += ",";
+    answer += int[i];
+  }
+  return answer + coins;
+};
+export { MoneyBalance };

@@ -1,9 +1,9 @@
 import React from "react";
 
 export const Button = (props) => {
-  const { className, content, color, onClick, unactive } = props;
+  const { className, content, textColor, color, onClick, unactive } = props;
   const defaultClass =
-    "rounded-md uppercase py-2 px-10 whitespace-nowrap bg-" + (color || "cyan") + " " + className;
+    "rounded-md uppercase py-2 px-10 whitespace-nowrap bg-" + (color || "cyan") + " text-"+(textColor || "white")+" " + className;
   const classNameButton = unactive
     ? defaultClass + " opacity-60 cursor-default text-black"
     : defaultClass;
