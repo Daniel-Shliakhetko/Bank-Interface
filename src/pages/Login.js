@@ -5,6 +5,7 @@ import { Button } from "../partials/Button";
 import { useNavigate } from "react-router-dom";
 import { Icon } from "../partials/Icon";
 import { Form } from "../partials/Form";
+import { mainPath } from "../data/navigation";
 
 const inputs = [
   {
@@ -24,7 +25,7 @@ const inputs = [
 export const Login = () => {
   const navigate = useNavigate();
   return (
-    <div className="px-12 w-full">
+    <div className="px-4 sm:px-12 w-full">
       <AppTitle />
       <Divider />
       <Form inputs={inputs} />
@@ -36,7 +37,7 @@ export const Login = () => {
           color="cyan"
           onClick={() => {
             alert("Successfully Signed In");
-            navigate("/");
+            navigate(mainPath+"/");
           }}
           unactive={false}
         />

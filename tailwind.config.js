@@ -24,7 +24,7 @@ module.exports = {
         'space-cadet': '#1e2e56',
         'cyan':'#06c4de',
         'dark-cornflower':'#2a4078',
-        'purple-pizzazz':'#ff39fa',
+        'purple':'#ff39fa',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

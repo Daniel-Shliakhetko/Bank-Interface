@@ -3,6 +3,7 @@ import { BackArrow, ThreeDots } from "../partials/Decorative";
 import { useNavigate } from "react-router-dom";
 import { SectionTitle } from "./Titles";
 import { ProgressBar } from "./Loader";
+import { mainPath } from "../data/navigation";
 
 export const Balance = (props) => {
   const { balance, className } = props;
@@ -18,7 +19,7 @@ export const Balance = (props) => {
     <div
       className={balanceClass}
       onClick={() => {
-        balance.expenses && navigate("/bills/" + balance.slug);
+        balance.expenses && navigate(mainPath+"/bills/" + balance.slug);
       }}
     >
       <h2 className="text-lg font-semibold">{balance.name}</h2>
@@ -69,7 +70,7 @@ export const OpenedBalance = (props) => {
       <button
         className="absolute top-2 left-8"
         onClick={() => {
-          navigate("/");
+          navigate(mainPath+"/");
         }}
       >
         <BackArrow />

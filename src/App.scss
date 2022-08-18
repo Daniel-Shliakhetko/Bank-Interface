@@ -10,6 +10,10 @@
     }
 }
 
+body {
+    background-color: #1e2e56;
+}
+
 * {
     user-select: none;
 }
@@ -84,18 +88,40 @@ h6 {
     // max-width: fit-content;
 }
 
-.swiper{
-    padding-bottom: 5rem!important;
+.swiper {
+    padding-bottom: 5rem !important;
 }
 
-.swiper-pagination{
-    bottom:0;
+.swiper-pagination {
+    bottom: 0;
 }
 
 .swiper-pagination-bullet {
-    background:white!important;
+    background: white !important;
 }
 
 .swiper-pagination-bullet-active {
-    background:#ccc!important;
+    background: #ccc !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1e2e56;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+    background: #06c4de;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #2BB0C2;
+    opacity: 0.7;
 }

@@ -24,7 +24,7 @@ export const FrontPage = (props) => {
   }, []);
 
   return (
-    <div className="px-12 w-full">
+    <div className="px-4 sm:px-12 w-full">
       {loading && props.isLoading && <Loader />}
       <SectionTitle content="Adipiscing elit" />
       <Balance balance={bills[0]} />

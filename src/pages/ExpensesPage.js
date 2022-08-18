@@ -27,7 +27,7 @@ const expenses = [
 
 export const ExpensesPage = () => {
   return (
-    <div className="px-12 w-full">
+    <div className="px-4 sm:px-12 w-full">
       <Balance balance={balance} />
       {expenses.map((expense, i) => (
         <ExpenseBlock key={i} expense={expense} />
@@ -45,7 +45,8 @@ export const ExpensesPage = () => {
 
 const ExpenseBlock = (props) => {
   const { expense } = props;
-  const color = expense.isIncome ? "cyan" : "purple-pizzazz";
+  const color = "cyan";
+  // const color = expense.isIncome ? "cyan" : "purple";
   const iconBoxClass =
     "h-16 w-16 rounded-lg flex justify-center items-center bg-" + color;
 

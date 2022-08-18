@@ -28,15 +28,16 @@ export const Header = () => {
     }
   }, [lastSize, size, hiddenUlClasses, showedUlClasses]);
 
-
   return (
-    <nav className="w-full px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
-      <Link to={mainPath+"/"}>Banking App</Link>
-      <ul className={ulClasses}>
-        {navItems.map((navItem) => (
-          <HeaderItem navItem={navItem} />
-        ))}
-      </ul>
+    <nav className="w-full lg:w-3/4 px-8 pr-16 py-4 flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 duration-500">
+      <Link to={mainPath + "/"}>BankingApp</Link>
+      {/* <div className="w-screen bg-space-cadet h-fit z-40"> */}
+        <ul className={ulClasses}>
+          {navItems.map((navItem) => (
+            <HeaderItem navItem={navItem} />
+          ))}
+        </ul>
+      {/* </div> */}
       <button
         className="absolute top-2 right-8 block md:hidden"
         onClick={toggleHeader}
@@ -50,7 +51,7 @@ export const Header = () => {
 const HeaderItem = (props) => {
   return (
     <li className="text-cyan">
-      <Link to={mainPath+props.navItem.slug}>{props.navItem.name}</Link>
+      <Link to={mainPath + props.navItem.slug}>{props.navItem.name}</Link>
     </li>
   );
 };

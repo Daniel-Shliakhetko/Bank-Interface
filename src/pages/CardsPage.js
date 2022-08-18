@@ -45,7 +45,7 @@ const balance = {
 
 export const CardsPage = () => {
   return (
-    <div className="px-12 w-full">
+    <div className="px-4 sm:px-12 w-full">
       <SectionTitle content="Adipiscing elit" />
       <Cards cards={cards} />
       <Balance balance={balance} />
